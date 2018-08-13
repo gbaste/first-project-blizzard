@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress } from 'reactstrap';
 import './ModalInfo.css'
 
 class ModalInfo extends React.Component {
@@ -36,10 +36,13 @@ componentWillReceiveProps(newProps){
           <ModalBody>
           <img className="modalphoto" src={`http://media.blizzard.com/wow/renders/npcs/zoom/creature${this.props.id}.jpg`}/>
             {this.props.description}
+            {/* <Progress color="success" value="100">{`Health: ${this.props.health}`}</Progress> */}
+           <div> {`Level: ${this.props.level}`} </div>
+            <Progress animated color="success" value="100">{`Health: ${this.props.health}`} </Progress>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+            {/* <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '} */}
+            <Button color="secondary" onClick={this.toggle}>Close</Button>
           </ModalFooter>
         </Modal>
       </div>

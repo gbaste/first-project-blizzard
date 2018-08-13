@@ -23,7 +23,7 @@ render() {
       <Form onSubmit={()=> this.handlerSearch()}>
         <InputGroup>
           <Input id="searchInput" placeholder="write a Boss name.." autoFocus="true" autoComplete="off" onChange={this.keepSearch} />
-          <InputGroupAddon addonType="append"><Button id="searchButton">Search</Button></InputGroupAddon>
+          {/* <InputGroupAddon addonType="append"><Button id="searchButton">Search</Button></InputGroupAddon> */}
         </InputGroup>
         </Form>
       </div>
